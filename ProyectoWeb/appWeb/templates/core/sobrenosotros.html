@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <body>
+  <!-- inicio nav -->
+  <nav>
+    <ul>
+    <a href="{% url 'index' %}"><img src="{% static 'images/Logo Fotografía Letras Moderno Minimalista Profesional Blanco y Negro.jpg' %}" alt="" class="img-logo"></a>
+    {%for Nombre in Titulonav %}
+            <h2>{{Nombre.titulo}}</h2>
+    {%endfor%}  
+    </ul>
+    <ul>
+    {%for Navbar in Navbars %}
+        <li>
+            <a href={{Navbar.url}}>
+                {{Navbar.enlac}}
+            </a>
+        </li>
+     {%endfor%}   
+</ul>
+  </nav>
+<!-- fin nav -->
+
+<div class="row">
+    <div class="col-lg-12-s">
+        <div class="jumbotron">
+            <h1 class="display-4"> || Start-Ups Chile Innovate Now || </h1>
+            <p class="lead">Somos una corporación sin fines de lucro que articula los diversos actores del ecosistema de innovación, para transformar resultados de investigación en productos o servicios, es decir, en innovación. Nacemos de la política pública que busca -junto con otras iniciativas-, transformar a Chile en una economía y sociedad basada en el conocimiento. Contamos con ocho universidades socias y tres centros o institutos de investigación.</p>
+          </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12-s">
+        <div class="jumbotron">
+            <h1 class="display-4"> || Expertos - Lideres || </h1>
+            <p class="lead">Contamos con más de 22 profesionales de todas las areas funcionales y eficientes necesarias. Eso nos convierte en uno de los actores más relevante en el 
+                            Impulso y transformacion hacia nuestros socios y entorno.  Siendo lideres en base a la transparencia y a la entrega de información rigurosa. Factores claves en nuestra relación con los clientes.</p>
+          </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12-1-s">
+      <div class="jumbotron">
+          <h1 class="display-4"> || Portafolio ||</h1>
+          <p class="lead">El objetivo de Innovate Now Chile es transformar la ciencia en innovación, colaborando con todos quienes participan en la larga cadena de valor que va desde el laboratorio al mercado. En ese camino hemos detectado una serie de brechas, que buscamos cubrir con nuestros programas.</p>
+        </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
